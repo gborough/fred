@@ -66,7 +66,7 @@ Supported Platforms: UNIX
 Caveats:
 
 - Due to lack of version information from FRED, official API additions and deprecations announcements
-  tracked in CHANGES is on best-effor basis
+  tracked in CHANGES are on best-effort basis
 
 - Maps Shape File query appears to be defunct
 
