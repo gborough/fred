@@ -21,7 +21,7 @@
  (description "API binding for Federal Reserve Economic Data")
  (depends
   (ocaml
-   (>= 4.05.0))
+   (>= 4.14.0))
   dune
   ezcurl-lwt
   (ppx_expect :with-test)
