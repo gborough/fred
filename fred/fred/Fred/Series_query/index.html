@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Series_query (fred.Fred.Series_query)</title><meta charset="utf-8"/><link rel="stylesheet" href="../../../odoc.support/odoc.css"/><meta name="generator" content="odoc 2.4.1"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><script src="../../../odoc.support/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body class="odoc"><nav class="odoc-nav"><a href="../index.html">Up</a> – <a href="../../index.html">fred</a> &#x00BB; <a href="../index.html">Fred</a> &#x00BB; Series_query</nav><header class="odoc-preamble"><h1>Module <code><span>Fred.Series_query</span></code></h1></header><div class="odoc-content"><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_query"><a href="#val-make_series_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeries of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `series?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_query"><a href="#val-run_series_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeries of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Series.seriess</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `series?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_categories_query"><a href="#val-make_series_categories_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_categories_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesCategories of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `categories?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_categories_query"><a href="#val-run_series_categories_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_categories_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesCategories of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Categories.categories</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `categories?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_observations_query"><a href="#val-make_series_observations_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_observations_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?observation_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?observation_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?units</span>:<a href="../Models/Observations/index.html#type-units">Models.Observations.units</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?frequency</span>:<a href="../Models/Observations/index.html#type-frequency">Models.Observations.frequency</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?aggregation_method</span>:<a href="../Models/Observations/index.html#type-aggregation_method">Models.Observations.aggregation_method</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?output_type</span>:<a href="../Models/Observations/index.html#type-output_type">Models.Observations.output_type</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?vintage_dates</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesObservations of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `observations?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_observations_query"><a href="#val-run_series_observations_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_observations_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesObservations of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Observations.observations</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `observations?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_release_query"><a href="#val-make_series_release_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_release_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesRelease of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `release?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_release_query"><a href="#val-run_series_release_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_release_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesRelease of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Releases.releases</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `release?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_search_query"><a href="#val-make_series_search_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_search_query : 
+  <span><span class="optlabel">?search_type</span>:<span class="xref-unresolved">Fred__.Search.search_type</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?order_by</span>:<a href="../Models/Search/index.html#type-order_by">Models.Search.order_by</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?filter_variable</span>:<a href="../Models/Series/index.html#type-filter_variable">Models.Series.filter_variable</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?filter_value</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?exclude_tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">search_text</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesSearch of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `search?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_search_query"><a href="#val-run_series_search_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_search_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesSearch of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Series.seriess</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `search?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_search_tags_query"><a href="#val-make_series_search_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_search_tags_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_group_id</span>:<a href="../Models/Tags/index.html#type-tag_group_id">Models.Tags.tag_group_id</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_search_text</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?order_by</span>:<a href="../Models/Tags/index.html#type-order_by">Models.Tags.order_by</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_search_text</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesSearchTags of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `search/tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_search_tags_query"><a href="#val-run_series_search_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_search_tags_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesSearchTags of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Tags.tags</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `search/tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_search_related_tags_query"><a href="#val-make_series_search_related_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_search_related_tags_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?exclude_tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_group_id</span>:<a href="../Models/Tags/index.html#type-tag_group_id">Models.Tags.tag_group_id</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_search_text</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?order_by</span>:<a href="../Models/Tags/index.html#type-order_by">Models.Tags.order_by</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_search_text</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesSearchRelatedTags of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `related_tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_search_related_tags_query"><a href="#val-run_series_search_related_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_search_related_tags_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesSearchRelatedTags of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Tags.tags</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `related_tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_tags_query"><a href="#val-make_series_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_tags_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?order_by</span>:<a href="../Models/Tags/index.html#type-order_by">Models.Tags.order_by</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesTags of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_tags_query"><a href="#val-run_series_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_tags_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesTags of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Tags.tags</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_updates_query"><a href="#val-make_series_updates_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_updates_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?filter_value</span>:<a href="../Models/Filter/index.html#type-filter_value">Models.Filter.filter_value</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?start_time</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?end_time</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesUpdates of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `updates?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_updates_query"><a href="#val-run_series_updates_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_updates_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesUpdates of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Series.seriess</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `updates?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_vintagedates_query"><a href="#val-make_series_vintagedates_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_vintagedates_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`SerSeriesVintageDates of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make series query string in the `vintagedates?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_vintagedates_query"><a href="#val-run_series_vintagedates_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_vintagedates_query : 
+  <span><span class="label">query</span>:<span>[ <span>`SerSeriesVintageDates of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Vintage_dates.vintage_dates</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span>
+    <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run series query in the `vintagedates?` path</p></div></div></div></body></html>

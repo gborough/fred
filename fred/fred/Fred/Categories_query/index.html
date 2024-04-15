@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Categories_query (fred.Fred.Categories_query)</title><meta charset="utf-8"/><link rel="stylesheet" href="../../../odoc.support/odoc.css"/><meta name="generator" content="odoc 2.4.1"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><script src="../../../odoc.support/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body class="odoc"><nav class="odoc-nav"><a href="../index.html">Up</a> – <a href="../../index.html">fred</a> &#x00BB; <a href="../index.html">Fred</a> &#x00BB; Categories_query</nav><header class="odoc-preamble"><h1>Module <code><span>Fred.Categories_query</span></code></h1></header><div class="odoc-content"><div class="odoc-spec"><div class="spec value anchored" id="val-make_categories_query"><a href="#val-make_categories_query" class="anchor"></a><code><span><span class="keyword">val</span> make_categories_query : <span><span class="label">category_id</span>:int <span class="arrow">&#45;&gt;</span></span> <span>[ <span>`CatCategories of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make categories query string in the `category?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_categories_query"><a href="#val-run_categories_query" class="anchor"></a><code><span><span class="keyword">val</span> run_categories_query : 
+  <span><span class="label">query</span>:<span>[ <span>`CatCategories of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Categories.categories</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run categories query in the `category?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_children_query"><a href="#val-make_children_query" class="anchor"></a><code><span><span class="keyword">val</span> make_children_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">category_id</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`CatChildren of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make categories query string in the `children?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_children_query"><a href="#val-run_children_query" class="anchor"></a><code><span><span class="keyword">val</span> run_children_query : 
+  <span><span class="label">query</span>:<span>[ <span>`CatChildren of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Categories.categories</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run categories string in the `children?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_related_query"><a href="#val-make_related_query" class="anchor"></a><code><span><span class="keyword">val</span> make_related_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">category_id</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`CatRelated of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make categories query string in the `related?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_related_query"><a href="#val-run_related_query" class="anchor"></a><code><span><span class="keyword">val</span> run_related_query : 
+  <span><span class="label">query</span>:<span>[ <span>`CatRelated of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Categories.categories</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run categories query in the `related?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_query"><a href="#val-make_series_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?order_by</span>:<a href="../Models/Series/index.html#type-order_by">Models.Series.order_by</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?filter_variable</span>:<span class="xref-unresolved">Fred__.Series.filter_variable</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?filter_value</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?exclude_tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">category_id</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`CatSeries of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make categories query string in the `series?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_query"><a href="#val-run_series_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_query : 
+  <span><span class="label">query</span>:<span>[ <span>`CatSeries of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Series.seriess</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run categories query in the `series?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_tags_query"><a href="#val-make_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> make_tags_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_group_id</span>:<a href="../Models/Tags/index.html#type-tag_group_id">Models.Tags.tag_group_id</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?search_text</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?order_by</span>:<a href="../Models/Tags/index.html#type-order_by">Models.Tags.order_by</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">category_id</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`CatTags of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make categories query string in the `tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_tags_query"><a href="#val-run_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> run_tags_query : 
+  <span><span class="label">query</span>:<span>[ <span>`CatTags of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Tags.tags</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run categories query in the `tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_related_tags_query"><a href="#val-make_related_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> make_related_tags_query : 
+  <span><span class="optlabel">?realtime_start</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?realtime_end</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?exclude_tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?tag_group_id</span>:<a href="../Models/Tags/index.html#type-tag_group_id">Models.Tags.tag_group_id</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?search_text</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?limit</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?offset</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?order_by</span>:<a href="../Models/Tags/index.html#type-order_by">Models.Tags.order_by</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?sort_order</span>:<a href="../Models/Sort_order/index.html#type-sort_order">Models.Sort_order.sort_order</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">tag_names</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">category_id</span>:int <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`CatRelatedTags of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make categories query string in the `related_tags?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_related_tags_query"><a href="#val-run_related_tags_query" class="anchor"></a><code><span><span class="keyword">val</span> run_related_tags_query : 
+  <span><span class="label">query</span>:<span>[ <span>`CatRelatedTags of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Tags.tags</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span> <span class="xref-unresolved">Stdlib</span>.result</span> <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run categories query in the `related_tags?` path</p></div></div></div></body></html>

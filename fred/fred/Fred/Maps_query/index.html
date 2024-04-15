@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Maps_query (fred.Fred.Maps_query)</title><meta charset="utf-8"/><link rel="stylesheet" href="../../../odoc.support/odoc.css"/><meta name="generator" content="odoc 2.4.1"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><script src="../../../odoc.support/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body class="odoc"><nav class="odoc-nav"><a href="../index.html">Up</a> – <a href="../../index.html">fred</a> &#x00BB; <a href="../index.html">Fred</a> &#x00BB; Maps_query</nav><header class="odoc-preamble"><h1>Module <code><span>Fred.Maps_query</span></code></h1></header><div class="odoc-content"><div class="odoc-spec"><div class="spec value anchored" id="val-make_shape_query"><a href="#val-make_shape_query" class="anchor"></a><code><span><span class="keyword">val</span> make_shape_query : <span><span class="label">shape</span>:string <span class="arrow">&#45;&gt;</span></span> <span>[ <span>`MapShapeFile of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make maps query string in the `shapes/file?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_shape_query"><a href="#val-run_shape_query" class="anchor"></a><code><span><span class="keyword">val</span> run_shape_query : 
+  <span><span class="label">query</span>:<span>[ <span>`MapShapeFile of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Maps_shape_file.maps_shape_file</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span>
+    <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run maps query in the `shapes/file?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_group_query"><a href="#val-make_series_group_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_group_query : <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span> <span>[ <span>`MapSeriesGroup of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make maps query string in the `series/group?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_group_query"><a href="#val-run_series_group_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_group_query : 
+  <span><span class="label">query</span>:<span>[ <span>`MapSeriesGroup of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Maps_series_group.maps_series_group</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span>
+    <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run maps query in the `series/group?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_series_data_query"><a href="#val-make_series_data_query" class="anchor"></a><code><span><span class="keyword">val</span> make_series_data_query : 
+  <span><span class="optlabel">?date</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?start_date</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_id</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`MapSeriesData of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make maps query string in the `series/data?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_series_data_query"><a href="#val-run_series_data_query" class="anchor"></a><code><span><span class="keyword">val</span> run_series_data_query : 
+  <span><span class="label">query</span>:<span>[ <span>`MapSeriesData of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Maps_series_data.maps_series_data</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span>
+    <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run maps query in the `series/data?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-make_regional_data_query"><a href="#val-make_regional_data_query" class="anchor"></a><code><span><span class="keyword">val</span> make_regional_data_query : 
+  <span><span class="optlabel">?start_date</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?transformation</span>:<a href="../Models/Maps_regional_data/index.html#type-transformation">Models.Maps_regional_data.transformation</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="optlabel">?aggregation_method</span>:<a href="../Models/Maps_regional_data/index.html#type-aggregation_method">Models.Maps_regional_data.aggregation_method</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">date</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">frequency</span>:<a href="../Models/Maps_regional_data/index.html#type-frequency">Models.Maps_regional_data.frequency</a> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">region_type</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">season</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">units</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">series_group</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span>unit <span class="arrow">&#45;&gt;</span></span>
+  <span>[ <span>`MapRegionalData of string</span> ]</span></span></code></div><div class="spec-doc"><p>Make maps query string in the `regional/data?` path</p></div></div><div class="odoc-spec"><div class="spec value anchored" id="val-run_regional_data_query"><a href="#val-run_regional_data_query" class="anchor"></a><code><span><span class="keyword">val</span> run_regional_data_query : 
+  <span><span class="label">query</span>:<span>[ <span>`MapRegionalData of string</span> ]</span> <span class="arrow">&#45;&gt;</span></span>
+  <span><span class="label">api_key</span>:string <span class="arrow">&#45;&gt;</span></span>
+  <span><span><span>(<span class="xref-unresolved">Fred__.Maps_regional_data.maps_regional_data</span>, <span class="xref-unresolved">Fred__.Api_error.api_error</span>)</span>
+    <span class="xref-unresolved">Stdlib</span>.result</span>
+    <span class="xref-unresolved">Lwt</span>.t</span></span></code></div><div class="spec-doc"><p>Run maps query in the `regional/data?` path</p></div></div></div></body></html>
